@@ -1,0 +1,289 @@
+/**
+*
+* General Styles
+*
+**/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+img {
+  max-width: 100%;
+}
+.cta {
+  margin-top: 30px;
+  color: #fff;
+  padding: 15px 25px;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.cta--orange {
+  background-color: #ee7c1c;
+}
+.cta--blue {
+  background-color: #060608;
+}
+
+/* Header Styles */
+.header {
+  padding: 10px;
+  background-color: #060608;
+}
+.header__logo {
+  width: 60%;
+  margin: 0 auto;
+}
+.nav-link {
+  font-weight: 600;
+  color: #e0dedc;
+  font-size: 1rem;  
+}
+.nav-link:hover {
+  color: #e0dedc;
+  text-decoration: underline;
+}
+.quote {
+  border: 2px solid #e0dedc;
+  text-transform: uppercase;
+}
+.nav-link.quote:hover {
+  text-decoration: none !important;
+}
+/* End of Header Styles */
+
+/* Foter Styles */
+/* .footer {} */
+/* End of Footer Styles */
+
+
+/**
+*
+* Home Page Styles
+*
+**/
+
+/* Banner Styles */
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-color: #16151f;
+  background-image: url(../images/background.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner__content {
+  width: 60%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 170px;
+}
+.banner__content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.banner__content p {
+  line-height: 1.8;
+  font-size: 1.3rem;
+}
+/* End of Banner Styles */
+
+/* Advert Styles */
+.advert {
+  position: relative;
+  margin: 0 auto;
+  top: -150px;
+}
+.advert img {
+  width: 100%;
+}
+/* End of Advert Styles */
+
+/* About Styles */
+.features__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  height: 40vh;
+}
+.about__img {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.about__img img {
+  background-color: #e6e6e6;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 50px auto;
+  
+}
+.about__desc {
+  padding: 0 20px;
+}
+.about__content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.about__content p {
+  line-height: 2;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+/* End of About Styles */
+
+/* Feature Styles */
+.features {
+  margin: 150px auto;
+  /* background-color: #ee7c1c; */
+  width: 100%;
+  padding: 100px 0;
+}
+/* End of Feature Styles */
+
+/**
+*
+* About Page Styles
+*
+**/
+
+.about-banner, .services-banner {
+  width: 100%;
+  height: 65vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.about-banner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/about2.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  filter: blur(10px);
+  position: absolute;
+  transition: all 2s;
+}
+.about-banner:hover::after, 
+.services-banner:hover::after {
+  filter: blur(0);
+}
+.about-banner:hover .banner__content {
+  filter: blur(3px);
+  transition: all 2s;
+}
+.banner__content {
+  filter: blur(0);
+  position: absolute;
+  z-index: 1;
+}
+.intro {
+  width: 100%;
+  background-color: #16151f;
+  color: #fff;
+  padding-top: 40px;
+}
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+.box i {
+  margin-bottom: 10px;
+}
+.box h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.box p {
+  font-size: 1rem;
+}
+
+
+/**
+*
+* Services Page Styles
+*
+**/
+.services-banner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/services.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  filter: blur(10px);
+  position: absolute;
+  transition: all 2s;
+}
+
+
+/* @media (min-width: 500px) {
+  .banner__container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 800px) {
+  .banner {
+    background-image: url(../images/banner-md.jpg);
+  }
+  .banner__container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner {
+    background-image: url(../images/banner-lg.jpg);
+  }
+  .banner__container {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .banner {
+    background-image: url(../images/banner-xl.jpg);
+  }
+} */

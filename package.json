@@ -1,0 +1,19 @@
+{
+  "name": "acme-company",
+  "version": "1.0.0",
+  "description": "A company website to showcase their brand and services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "dev-start": "nodemon app"
+  },
+  "author": "Odinaka Joy",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
