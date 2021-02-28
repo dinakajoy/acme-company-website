@@ -1,9 +1,8 @@
 .testimonial-area {
-  margin: 150px auto;
   background-color: #ee7c1c;
   width: 100%;
-  padding: 100px 0;
-  color: #d1e9ff;
+  padding: 100px 0 0;
+  color: #16151f;
 }
 .section-heading {
   margin-bottom: 40px;
@@ -129,22 +128,22 @@
 .client-comment h3 {
   font-size: 22px;
   line-height: 32px;
-  color: #505b6d;
+  color: #d1e9ff;
 }
 .client-comment span i {
   font-size: 60px;
-  color: #0084ff;
+  color: #d1e9ff;
   margin: 40px 0 24px;
   display: inline-block;
 }
 
 .client-info h3 {
-  color: #000;
+  color: #16151f;
   font-weight: 600;
   margin-bottom: 4px;
 }
 .client-info p {
-  color: #0084ff;
+  color: #d1e9ff;
   text-transform: uppercase;
 }
 

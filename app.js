@@ -15,31 +15,18 @@ app.get('/about-us', (req, res) => {
 app.get('/our-services', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'services.html'));
 })
-// app.get('/our-contact', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
-// })
-
-// app.post('/mail', (req, res) => {
-//   const {name, from, subject, body} = req.body;
-//   sendMail(from, name, subject, body, (err, data) => {
-//     if(err) {
-//       // res.status(500).json({
-//       //   message: 'Internal Error, Please Resend'
-//       // })
-//       throw err;
-//     } else {
-//       res.json({
-//         message: 'Your Message has Been Sent'
-//       })
-//     }
-//   })
-// })
-// app.get("/sw_Site.js", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "./sw_Site.js"));
-// });
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public', '/not_found.html'));
-// })
+app.get('/pricing', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'pricing.html'));
+})
+app.get('/contact-us', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'contact.html'));
+})
+app.get('/sign-in', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'signin.html'));
+})
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', '/not_found.html'));
+})
 
 const PORT = process.env.PORT || 5000;
 
