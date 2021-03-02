@@ -480,6 +480,18 @@ fieldset {
 
 /**
 *
+* Not Found Page Styles
+*
+**/
+
+.not-found a {
+  text-decoration: none;
+  color: #ee7c1c;
+  font-weight: 700;
+}
+
+/**
+*
 * Sign-in Page Styles
 *
 **/
