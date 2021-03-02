@@ -25,7 +25,7 @@ app.get('/sign-in', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'signin.html'));
 })
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', '/not_found.html'));
+  res.sendFile(path.join(__dirname, 'public', '/not-found.html'));
 })
 
 const PORT = process.env.PORT || 5000;

@@ -27,15 +27,27 @@ img {
   text-transform: uppercase;
   text-decoration: none;
 }
-.cta--orange {
+.cta--orange, 
+.btn-primary,
+.btn-outline-primary:hover {
   background-color: #ee7c1c;
+  border: 0;
 }
 .cta--blue {
   background-color: #060608;
 }
-.cta--blue:hover {
+.cta--blue:hover, 
+.btn-primary:hover, 
+.btn-outline-primary {
   color: #ee7c1c;
+  background-color: transparent;
+  border: 1px solid #ee7c1c;
+  border-radius: 3px;
 }
+.btn-outline-primary {
+
+}
+
 
 /* Header Styles */
 .header {
@@ -249,7 +261,8 @@ fieldset {
 **/
 
 .about-banner,
-.services-banner {
+.services-banner,
+.pricing-banner {
   width: 100%;
   height: 65vh;
   position: relative;
@@ -272,11 +285,19 @@ fieldset {
   transition: all 2s;
 }
 .about-banner:hover::after, 
-.services-banner:hover::after {
+.services-banner:hover::after,
+.pricing-banner:hover::after {
   filter: blur(0);
 }
+.banner__content,
+.services__content,
+.pricing__content {
+  position: absolute;
+  z-index: 8;
+}
 .about-banner:hover .banner__content,
-.services-banner:hover .services__content {
+.services-banner:hover .services__content,
+.pricing-banner:hover .pricing__content {
   filter: blur(3px);
   transition: all 2s;
 }
@@ -328,7 +349,7 @@ fieldset {
   height: 100%;
   background-image: url(../images/services-banner.svg);
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center center;
   background-size: cover;
   filter: blur(10px);
   position: absolute;
@@ -337,6 +358,76 @@ fieldset {
 .services__content h1 {
   color: #16151f;
   font-weight: 800;
+}
+
+/**
+*
+* Pricing Page Styles
+*
+**/
+
+.pricing {
+  margin: 50px auto;
+}
+.pricing-banner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/pricing-banner.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  filter: blur(10px);
+  position: absolute;
+  transition: all 2s;
+}
+.pricing__content h1 {
+  color: #16151f;
+  font-weight: 800;
+  z-index: 8;
+}
+
+/**
+*
+* Sign-in Page Styles
+*
+**/
+
+.form-signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  margin: 100px auto 50px;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 @media (max-width: 769px) {
