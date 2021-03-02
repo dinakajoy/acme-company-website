@@ -260,6 +260,9 @@ fieldset {
 *
 **/
 
+.abt-body {
+  background-color: #e6e6e6;
+}
 .about-banner,
 .services-banner,
 .pricing-banner {
@@ -336,7 +339,60 @@ fieldset {
 .box p {
   font-size: 1rem;
 }
+.about-wrapper {
+  text-align: center;
+}
+.about-wrapper h2 {
+  margin: 30px auto;
+  font-weight: 800;
+  font-size: 4rem;
+}
+.about-wrapper p {
+  line-height: 2;
+}
 
+.about-stat {
+  background-color: #ffffff;
+  padding: 3rem 0;
+}
+.c-stat {
+  justify-content: center;
+  justify-items: self-start;
+}
+.c-stat__number {
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: normal;
+  font-size: 4rem;
+  color: #1d1d1d;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+.c-stat p {
+  margin: 0;
+}
+.c-stat__copy {
+  line-height: 1.42857143;
+  letter-spacing: normal;
+  font-size: .875rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.abt-acme {
+  margin: 80px auto;
+}
+.abt-acme h2 {
+  font-weight: 800;
+}
+.abt-acme p {
+  line-height: 2;
+}
+.abt-acme .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /**
 *
@@ -432,8 +488,14 @@ fieldset {
 
 @media (max-width: 769px) {
   .features__content,
-  .about__content {
+  .about__content,
+  .boxes {
     grid-template-columns: 1fr;
+  }
+  .banner__content,
+  .services__content,
+  .pricing__content {
+    width: 100%;
   }
   .banner__content p {
     display: none;
@@ -446,5 +508,11 @@ fieldset {
   }
   .features__img img:not(:first-child) {
     display: none;
+  }
+  .about-wrapper h2 {
+    font-size: 2rem;
+  }
+  .about-stat {
+    text-align: center;
   }
 }
