@@ -64,9 +64,9 @@
   </header><!-- End of Header Section -->
 
   <main class="main"><!-- Main -->
-    <section class="services-banner"><!-- Banner -->
-      <div class="services__content">
-        <h1>What We Do?</h1>
+    <section class="contact-banner"><!-- Banner -->
+      <div class="contact__content">
+        <h1>Get In Touch</h1>
       </div>
     </section><!-- End of Banner -->
 
@@ -86,6 +86,72 @@
           <i class="fa fa-cogs fa-3x"></i>
           <h2>Our Core Value</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, accusantium?</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="py-5 contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 contact-wrapper">
+            <h2>Please Drop A Message and We Will Get In Touch Within 24 Hours</h2>
+            <p class="lead mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas officia sunt dicta aliquam amet porro suscipit architecto illum, qui totam non eos ipsa debitis deserunt beatae natus nam consequatur explicabo! Porro non fugit delectus quo numquam possimus at eligendi minima aperiam? Fugiat natus reprehenderit possimus in quibusdam, eaque dolores quisquam!</p>
+    
+            <form id="contact-form" method="post" action="" role="form">
+              <div class="messages"></div>
+              <div class="controls">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="form_name">Firstname *</label>
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="form_lastname">Lastname *</label>
+                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="form_email">Email *</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="form_phone">Phone</label>
+                      <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 mb-5">
+                    <div class="form-group">
+                      <label for="form_message">Message *</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-5">
+                    <input type="submit" class="btn btn-primary btn-send" value="Send message">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

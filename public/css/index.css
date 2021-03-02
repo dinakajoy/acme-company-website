@@ -86,6 +86,9 @@ img {
 .footer h3 {
   margin-bottom: 30px;
 }
+.footer p {
+  margin-bottom: 0;
+}
 fieldset {
   margin-top: 30px;
   padding: 10px;
@@ -265,7 +268,8 @@ fieldset {
 }
 .about-banner,
 .services-banner,
-.pricing-banner {
+.pricing-banner,
+.contact-banner {
   width: 100%;
   height: 65vh;
   position: relative;
@@ -289,23 +293,28 @@ fieldset {
 }
 .about-banner:hover::after, 
 .services-banner:hover::after,
-.pricing-banner:hover::after {
+.pricing-banner:hover::after,
+.contact-banner:hover::after {
   filter: blur(0);
 }
 .banner__content,
 .services__content,
-.pricing__content {
+.pricing__content,
+.contact__content {
   position: absolute;
   z-index: 8;
 }
 .about-banner:hover .banner__content,
 .services-banner:hover .services__content,
-.pricing-banner:hover .pricing__content {
+.pricing-banner:hover .pricing__content,
+.contact-banner:hover .contact__content {
   filter: blur(3px);
   transition: all 2s;
 }
 .banner__content,
-.services__content {
+.services__content,
+.pricing__content,
+.contact__content {
   filter: blur(0);
   position: absolute;
   z-index: 1;
@@ -437,10 +446,36 @@ fieldset {
   position: absolute;
   transition: all 2s;
 }
-.pricing__content h1 {
+.pricing__content h1,
+.contact__content h1 {
   color: #16151f;
   font-weight: 800;
   z-index: 8;
+}
+
+/**
+*
+* Contact Page Styles
+*
+**/
+.contact-banner::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/contact-banner.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: blur(10px);
+  position: absolute;
+  transition: all 2s;
+}
+.contact-section h2 {
+  font-weight: 800;
+}
+.contact-wrapper {
+  width: 70%;
+  margin: 50px auto;
 }
 
 /**
@@ -514,5 +549,9 @@ fieldset {
   }
   .about-stat {
     text-align: center;
+  }
+  .contact-wrapper {
+    width: 100%;
+    margin: 30px auto;
   }
 }
