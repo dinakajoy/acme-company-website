@@ -3,7 +3,7 @@ A company profile website to showcase their services and cantact details
 
 
 ## Description
-This is a simple website built with HTML, CSS, jQuery and served with Node. Just to learn how to use node without a framework for a complete website.   
+This is a simple website built with HTML, CSS, jQuery and served with Node. Just to learn how to use express to serve a website.   
 
 ## Installation
 Clone the repository and cd into the project directory    
