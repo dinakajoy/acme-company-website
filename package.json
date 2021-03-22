@@ -4,16 +4,30 @@
   "description": "A company website to showcase their brand and services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app",
-    "dev-start": "nodemon app"
+    "build-dev": "webpack  --config webpack.dev.js",
+    "dev-start": "build-dev && nodemon app",
+    "build-prod": "webpack --config webpack.prod.js",
+    "start": "npm run build-prod && node app"
   },
   "author": "Odinaka Joy",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "clean-webpack-plugin": "^2.0.2",
+    "express": "^4.17.1",
+    "url-loader": "^4.1.1"
   }
 }

@@ -1,3 +1,6 @@
+// import "../css/reset.scss";
+import "../css/index.scss";
+
 $(function() {
   $("#contact-form").validator();
 

@@ -1,3 +1,5 @@
+import "../css/testimonials.scss";
+
 $(document).ready(function () {
   $('.client-single').on('click', function (event) {
     event.preventDefault();
