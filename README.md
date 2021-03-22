@@ -24,6 +24,7 @@ Edit to suit your company needs and brands
 * CSS - For styling the user interface
 * jQuery - For functionaity
 * Node - To serve the contents
+* Webpack - To bundle static assets for production
 
 ## Link
 Access app via https://acme-company-by-joy.herokuapp.com/
