@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Who We Are | ACME Company</title>
 </head>
-<body>
+<body class="abt-body">
   <header class="header fixed-top"><!-- Header Section -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
@@ -18,10 +18,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="/about-us">About Us</a>
+              <a class="nav-link active" aria-current="page" href="/about-us">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/our-services">Our Services</a>
+              <a class="nav-link" href="/our-services">Our Services</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/pricing">Pricing</a>
@@ -46,9 +46,9 @@
   </header><!-- End of Header Section -->
 
   <main class="main"><!-- Main -->
-    <section class="services-banner"><!-- Banner -->
-      <div class="services__content">
-        <h1>What We Do</h1>
+    <section class="about-banner"><!-- Banner -->
+      <div class="banner__content">
+        <h1>Who We Are</h1>
       </div>
     </section><!-- End of Banner -->
 
@@ -72,65 +72,48 @@
       </div>
     </section>
 
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">We Offer The Best</h1>
-          <p class="lead text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non adipisci harum nostrum cumque saepe quasi. Repellat eveniet velit nemo in ex doloremque delectus.</p>
-          <p>
-            <a href="/about-us" class="btn btn-primary my-2">Know More</a>
-            <a href="/pricing" class="btn btn-outline-primary my-2">Fees</a>
-          </p>
+    <section class="about">
+      <div class="container">
+        <div class="about-wrapper">
+          <h2>Make work life simpler, more pleasant and more productive for organizations.</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem repellat recusandae numquam voluptate sit temporibus? Quos dolore recusandae natus porro, aliquid et optio eveniet placeat neque sequi pariatur. Sunt, quae praesentium architecto, recusandae eius repellendus in quos quo autem ad maiores optio dolore fuga esse itaque minus aspernatur saepe necessitatibus nobis deleniti repellat pariatur. Quidem adipisci dignissimos fugit voluptas cum! Facere dolores quod ex harum inventore earum porro? Architecto, cupiditate accusamus. Excepturi deleniti suscipit iure eius facilis assumenda provident ut rem eum esse mollitia qui quasi accusantium, eveniet vel nemo ratione. Dolor culpa magnam autem illum earum sint est aspernatur!</p>
         </div>
       </div>
     </section>
 
-    <section class="py-5">
+    <section class="about-stat">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 my-5">
-            <div class="bg-dark text-center text-white">
-              <div class="my-3 py-3">
-                <h2 class="display-5">Service One</h2>
-                <p class="lead">And an even wittier subheading.</p>
-              </div>
-              <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-              <img src="./images/service1.svg" alt="ACME Services"></div>
-            </div>
+          <div class="col-sm-6 col-md-3">
+            <p class="c-stat"><span class="c-stat__number">12k+</span></p><p class="c-stat__copy">daily<br>active users</p>
           </div>
-          <div class="col-md-6 my-5">
-            <div class="bg-dark text-center text-white">
-              <div class="my-3 py-3">
-                <h2 class="display-5">Service Two</h2>
-                <p class="lead">And an even wittier subheading.</p>
-              </div>
-              <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-              <img src="./images/service2.svg" alt="ACME Services"></div>
-            </div>
+          <div class="col-sm-6 col-md-3">
+            <p class="c-stat"><span class="c-stat__number">9k+</span></p><p class="c-stat__copy">paid<br>customers</p>
           </div>
-          <div class="col-md-6 my-5">
-            <div class="bg-dark text-center text-white">
-              <div class="my-3 py-3">
-                <h2 class="display-5">Service Three</h2>
-                <p class="lead">And an even wittier subheading.</p>
-              </div>
-              <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-              <img src="./images/service3.svg" alt="ACME Services"></div>
-            </div>
+          <div class="col-sm-6 col-md-3">
+            <p class="c-stat"><span class="c-stat__number">65</span></p><p class="c-stat__copy">of the Fortune 100<br>use our product</p>
           </div>
-          <div class="col-md-6 my-5">
-            <div class="bg-dark text-center text-white">
-              <div class="my-3 py-3">
-                <h2 class="display-5">Service Four</h2>
-                <p class="lead">And an even wittier subheading.</p>
-              </div>
-              <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-              <img src="./images/service4.svg" alt="ACME Services"></div>
-            </div>
+          <div class="col-sm-6 col-md-3">
+            <p class="c-stat"><span class="c-stat__number">150+</span></p><p class="c-stat__copy">countries have<br>daily active users on our platform</p>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="abt-acme">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h2>Building the ecosystem for work</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore earum cumque eveniet velit, saepe quisquam corporis laudantium hic error, porro assumenda sint nam, repellat accusantium eligendi praesentium explicabo atque facere illo molestiae odit sapiente aperiam ex neque? Inventore iste voluptas ab laborum distinctio? Autem totam nostrum, fuga distinctio asperiores facere at neque possimus repudiandae ab ipsam quasi repellendus hic, perspiciatis debitis temporibus eius ipsa, rerum placeat eligendi dolor labore aut impedit? Laboriosam dolorum ipsum illo rerum quo natus voluptatem porro, earum, doloremque dignissimos ut autem vel est sit ea nostrum nihil impedit officia tempora nobis voluptate maiores soluta? Soluta, ad?</p>
+          </div>
+          <div class="col-md-5 img">
+            <img src="./images/about-acme.svg" alt="About ACME Company">
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main><!-- End of Main Section -->
 
   <footer class="footer">

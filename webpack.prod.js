@@ -5,11 +5,12 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
-let htmlPageNames = ['index','about-us', 'contact', 'not-found', 'pricing', 'services', 'signin'];
+let htmlPageNames = ['index','about', 'contact', 'not-found', 'pricing', 'services', 'signin'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
+    favicon: './src/images/favicon.ico',
     minify: {
       removeAttributeQuotes: true,
       collapseWhitespace: true,
@@ -37,9 +38,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({ filename: "css/[name].[contentHash].css" }),
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      chunks: ['main']
-    })
+    new HtmlWebpackPlugin({ chunks: ['main'] })
   ].concat(multipleHtmlPlugins),
   module: {
     rules: [
@@ -48,16 +47,28 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(svg|png|jpg|gif)$/i,
+        test: /\.(png|svg|jpg|gif|ico)$/,
+        include: /images/,
         use: {
-          loader: "url-loader",
+          loader: "file-loader",
           options: {
             name: "[name].[hash].[ext]",
+            emitFile: true,
             outputPath: "images",
-            esModule: false,
-          //   limit: 10000,
-          //   emitFile: true,
-          //   useRelativePath: true
+            publicPath: "images"
+          }
+        }
+      },
+      {
+        test: /\.(png|svg|jpg|gif|ico)$/,
+        include: /css-img/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            emitFile: true,
+            outputPath: "images",
+            publicPath: "../images"
           }
         }
       },

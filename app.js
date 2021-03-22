@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 })
 app.get('/about-us', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'about-us.html'));
+  res.sendFile(path.join(__dirname, 'public', 'about.html'));
 })
 app.get('/our-services', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'services.html'));
@@ -25,7 +25,7 @@ app.get('/sign-in', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'signin.html'));
 })
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', '/not-found.html'));
+  res.sendFile(path.join(__dirname, 'public', 'not-found.html'));
 })
 
 const PORT = process.env.PORT || 5000;
