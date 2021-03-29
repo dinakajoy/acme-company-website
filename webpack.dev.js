@@ -1,29 +1,32 @@
 const path = require("path");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
-let htmlPageNames = ['index','about-us', 'contact', 'not-found', 'pricing', 'services', 'signin'];
+let htmlPageNames = ['about', 'contact', 'not-found', 'pricing', 'services', 'signin'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
+    chunks: ['main']
   })
 });
 
 module.exports = {
-  entry: {
-    main: "./src/assets/js/index.js",
-    vendor: "./src/assets/js/vendor.js"
-  },
   mode: "development",
+  watch: true,
+  entry: {
+    main: "./src/js/main.js",
+    testimonials: "./src/js/testimonials.js"
+  },
   output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist")
+    filename: "[name].js",
+    path: path.resolve(__dirname, "public")
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/template.html"
+    new HtmlWebpackPlugin({ 
+      template: './src/index.html',
+      chunks: ['main', 'testimonials']
     })
-  ],
+  ].concat(multipleHtmlPlugins),
   module: {
     rules: [
       {
@@ -31,12 +34,28 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|ico)$/,
+        include: /images/,
         use: {
           loader: "file-loader",
           options: {
             name: "[name].[hash].[ext]",
-            outputPath: "imgs"
+            emitFile: true,
+            outputPath: "images",
+            publicPath: "images"
+          }
+        }
+      },
+      {
+        test: /\.(png|svg|jpg|gif|ico)$/,
+        include: /css-img/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            emitFile: true,
+            outputPath: "images",
+            publicPath: "../images"
           }
         }
       },

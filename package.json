@@ -4,8 +4,9 @@
   "description": "A company website to showcase their brand and services",
   "main": "index.js",
   "scripts": {
-    "build-dev": "webpack --config webpack.prod.js",
-    "dev-start": "npm run build-dev && nodemon app",
+    "bd": "webpack --config webpack.dev.js",
+    "dev-start": "nodemon app",
+    "build": "webpack --config webpack.prod.js",
     "start": "node app"
   },
   "author": "Odinaka Joy",

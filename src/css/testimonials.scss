@@ -1,8 +1,8 @@
 .testimonial-area {
-  background-color: #ee7c1c;
+  background-color: #e6e6e6;
   width: 100%;
   padding: 100px 0 0;
-  color: #16151f;
+  color: #6457a6;
 }
 .section-heading {
   margin-bottom: 40px;
@@ -100,8 +100,8 @@
 .client-single.active .client-img:before {
   border-radius: 100%;
   content: "";
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#9d5bfe), to(#3890fe));
-  background-image: linear-gradient(180deg, #9d5bfe 0%, #3890fe 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6457a6), to(#44bba4));
+  background-image: linear-gradient(180deg, #6457a6 0%, #44bba4 100%);
   padding: 5px;
   width: 160px;
   height: 160px;
@@ -113,7 +113,7 @@
 .client-single .client-img img {
   width: 150px;
   border-radius: 50%;
-  border: 8px solid #d1e9ff;
+  border: 8px solid #6457a6;
   cursor: pointer;
 }
 .client-single.active .client-img img {
@@ -128,22 +128,22 @@
 .client-comment h3 {
   font-size: 22px;
   line-height: 32px;
-  color: #d1e9ff;
+  color: #ee7c1c;
 }
 .client-comment span i {
   font-size: 60px;
-  color: #d1e9ff;
+  color: #ee7c1c;
   margin: 40px 0 24px;
   display: inline-block;
 }
 
 .client-info h3 {
-  color: #16151f;
+  color: #6457a6;
   font-weight: 600;
   margin-bottom: 4px;
 }
 .client-info p {
-  color: #d1e9ff;
+  color: #ee7c1c;
   text-transform: uppercase;
 }
 
