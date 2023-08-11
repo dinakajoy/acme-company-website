@@ -27,7 +27,7 @@ Edit to suit your company needs and brands
 * Webpack - To bundle static assets for production
 
 ## Link
-Access app via https://acme-company-by-joy.herokuapp.com/
+Access app via [acme-company-by-joy](https://acme-company-website.onrender.com/)
 
 ## Author
 [Odinaka Joy](http://dinakajoy.com)
